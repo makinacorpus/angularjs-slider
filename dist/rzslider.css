@@ -32,14 +32,31 @@ rzslider span.rz-base {
   padding: 0;
 }
 
+rzslider span.rz-bar-wrapper {
+  width: 100%;
+  height: 32px;
+  padding-top: 16px;
+  margin-top: -16px;
+  box-sizing: border-box;
+}
+
 rzslider span.rz-bar {
   z-index: 0;
   width: 100%;
-  height: 100%;
+  height: 4px;
   background: #d8e0f3;
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
           border-radius: 2px;
+}
+
+rzslider span.rz-click-bar {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  bottom: -12px;
+  left: 0;
+  z-index: 2;
 }
 
 rzslider span.rz-bar.rz-selection {
@@ -53,7 +70,7 @@ rzslider span.rz-bar.rz-selection {
 
 rzslider span.rz-pointer {
   top: -14px;
-  z-index: 2;
+  z-index: 3;
   width: 32px;
   height: 32px;
   cursor: pointer;
@@ -97,4 +114,17 @@ rzslider span.rz-bubble.rz-selection {
 
 rzslider span.rz-bubble.rz-limit {
   color: #55637d;
+}
+
+rzslider .rz-ticks {
+  position: absolute;
+  top: -5px;
+  height: 16px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+rzslider .rz-ticks td {
+  border-right: 1px solid #666666;
+  border-left: 1px solid #666666;
 }
